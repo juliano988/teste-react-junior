@@ -1,91 +1,46 @@
-Teste para avaliação Frontend Junior React
-==========================================
+# Getting Started with Create React App
 
-Este é o arquivo de requisitos para o teste de candidatos à vaga de desenvolvedor Frontend React Junior.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Seu objetivo será programar um aplicativo em React que fará um CRUD local para cadastro de produtos.
+## Available Scripts
 
-Crie um repositório **público** no GitHub ou GitLab e inicie seu projeto com o create-react-app ou create-next-app.
-Depois de finalizado, enviar o link do repositório para o avaliador que entrou em contato.
+In the project directory, you can run:
 
-O projeto **DEVE** ser programado em Typescript.
+### `yarn start`
 
-------
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Formulário
-----------
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-A página terá um componente que será o formulário de criação, que conterá os seguintes campos:
+### `yarn test`
 
-* Código do SKU (int)
-* Nome do produto (string)
-* Preço (string)
-* Categoria (string) -- Tipo select
-    * Opções do select: Leite, Doce, Iogurte
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-O botão SALVAR irá adicionar as informações do produto em um ContextAPI local que será de repositório dos produtos cadastrados.
+### `yarn build`
 
-Se adicionado com sucesso, limpar todos os dados do formulário.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Caso o código do SKU já estiver adicionado no repositório, exibir uma mensagem que o código do SKU já está cadastrado. Neste caso, não limpar os dados preenchidos, fazendo com que o usuário possa alterar os dados para adicionar novamente.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Tabela
-------
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Exibir uma tabela com Filtro e Ordenação com as seguintes colunas:
+### `yarn eject`
 
-* SKU
-* Nome
-* Preço
-* Categoria
-* Ações
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-Na coluna de ações, adicionar um botão com ícone de lixeira, que ao clicar, irá apagar aquele registro do produto.
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-Repositório de dados
---------------------
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-Criar um ContextAPI que irá englobar a tela para salvar o repositório de dados dos produtos cadastrados. Não é necessário fazer a persistência dos dados (em localStorage ou API), o dado pode ser apenas local e em memória dentro do próprio ContextAPI.
+## Learn More
 
-**IMPORTANTE: utilizar ContextAPI. Não utilizar Redux.**
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
------
-
-
-Bibliotecas para utilização
----------------------------
-
-* **MaterialUI [Obrigatório]**
-* react-data-table-component
-* react-hook-form
-
------
-
-
-Pontos de avaliação [OBRIGATÓRIO]
----------------------------------
-
-- [ ] Typescript
-- [ ] Formulário
-- [ ] Validação de SKU duplicado
-- [ ] Tabela com visualização dos dados
-- [ ] Botão de remover registro
-- [ ] Realizar commits bem descritos e bom gerenciamento do repositório GIT
-- [ ] Documentação mínima
-
-
-Pontos de avaliação [Opcional/Extra/Diferencial]
-------------------------------
-
-- [ ] Validação complexa dos dados (dinheiro para preço do produto)
-- [ ] Modal de feedback de erros
-- [ ] Modal de confirmação de remoção de registro
-- [ ] Modal de visualização dos dados de cada registro
-- [ ] Edição de dados do registro
-- [ ] Utilização da biblioteca react-data-table-component
-- [ ] Utilização da biblioteca react-hook-form
-- [ ] Utilização de bibliotecas que simulam APIs (ou desenvolver uma API) para consumo e persistência dos dados
-- [ ] Boa documentação
-- [ ] Testes de unidade
-
+To learn React, check out the [React documentation](https://reactjs.org/).

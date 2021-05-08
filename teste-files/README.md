@@ -66,12 +66,12 @@ Bibliotecas para utilização
 Pontos de avaliação [OBRIGATÓRIO]
 ---------------------------------
 
-- [ ] Typescript
-- [ ] Formulário
-- [ ] Validação de SKU duplicado
-- [ ] Tabela com visualização dos dados
-- [ ] Botão de remover registro
-- [ ] Realizar commits bem descritos e bom gerenciamento do repositório GIT
+- [x] Typescript
+- [x] Formulário
+- [x] Validação de SKU duplicado
+- [x] Tabela com visualização dos dados
+- [x] Botão de remover registro
+- [x] Realizar commits bem descritos e bom gerenciamento do repositório GIT
 - [ ] Documentação mínima
 
 
@@ -79,12 +79,12 @@ Pontos de avaliação [Opcional/Extra/Diferencial]
 ------------------------------
 
 - [ ] Validação complexa dos dados (dinheiro para preço do produto)
-- [ ] Modal de feedback de erros
+- [x] Modal de feedback de erros
 - [ ] Modal de confirmação de remoção de registro
 - [ ] Modal de visualização dos dados de cada registro
 - [ ] Edição de dados do registro
-- [ ] Utilização da biblioteca react-data-table-component
-- [ ] Utilização da biblioteca react-hook-form
+- [x] Utilização da biblioteca react-data-table-component
+- [x] Utilização da biblioteca react-hook-form
 - [ ] Utilização de bibliotecas que simulam APIs (ou desenvolver uma API) para consumo e persistência dos dados
 - [ ] Boa documentação
 - [ ] Testes de unidade

@@ -1,5 +1,5 @@
 export type productsDBSchema = {
-  SKU: number,
+  sku: number,
   nome: string,
   preco: string,
   categoria: string

@@ -21,15 +21,15 @@ const useStyles = makeStyles((theme) => ({
 
 const categories = [
   {
-    value: 'leite',
+    value: 'Leite',
     label: 'Leite',
   },
   {
-    value: 'doce',
+    value: 'Doce',
     label: 'Doce',
   },
   {
-    value: 'iogurte',
+    value: 'Iogurte',
     label: 'Iogurte',
   }
 ];
@@ -38,11 +38,13 @@ export default function FormSec() {
 
   const productsDBState = useContext(ProductsDBContext)
 
-  const { register, handleSubmit, control, formState: { errors } } = useForm();
-  function onSubmit(data:productsDBSchema){
-    productsDBState.state.push(data);
-    productsDBState.setState(productsDBState.state)
-    console.log(productsDBState.state)
+  const { register, handleSubmit, control, reset, setValue, formState: { errors } } = useForm();
+  function onSubmit(data: productsDBSchema) {
+    const tempArr = productsDBState.state.slice(0)
+    tempArr.push(data);
+    productsDBState.setState(tempArr)
+    reset();
+    setValue('categoria','Leite');
   }
 
   const classes = useStyles();
@@ -55,7 +57,7 @@ export default function FormSec() {
 
           <div>
             <div>
-              <TextField id="SKU" label="SKU" type="number" variant="outlined" {...register("SKU")} />
+              <TextField id="SKU" label="SKU" type="number" variant="outlined" {...register("sku")} />
               {errors.SKU && <span>This field is required</span>}
             </div>
             <div>
@@ -73,7 +75,7 @@ export default function FormSec() {
               <Controller
                 control={control}
                 name="categoria"
-                defaultValue="leite"
+                defaultValue="Leite"
                 render={({ field: { onChange, value } }) => (
                   <TextField
                     id="categoria"

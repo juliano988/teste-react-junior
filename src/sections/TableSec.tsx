@@ -6,6 +6,7 @@ import { IconButton, makeStyles, Snackbar } from "@material-ui/core";
 import MuiAlert from '@material-ui/lab/Alert';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { productsDBSchema } from "../../customTypes";
+import Swal from 'sweetalert2'
 
 const columns = [
   {
@@ -55,11 +56,26 @@ export default function TableSec() {
 
   useEffect(function () {
     if (itemToDelete) {
-      const tempArr = productsDBState.state.filter(function (val) { return val.sku !== itemToDelete });
-      productsDBState.setState(tempArr);
-      handleOpen();
+      Swal.fire({
+        title: 'Você tem certeza?',
+        text: 'O item de SKU '+itemToDelete+' será excluído permanentemente nesta ação.',
+        icon: 'question',
+        showCancelButton: true,
+        cancelButtonText: 'Cancelar!',
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sim, eu tenho!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          const tempArr = productsDBState.state.filter(function (val) { return val.sku !== itemToDelete });
+          productsDBState.setState(tempArr);
+          handleOpen();
+        } else {
+          setitemToDelete(undefined)
+        }
+      })
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [itemToDelete])
 
   const handleOpen = () => {

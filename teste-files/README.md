@@ -78,7 +78,7 @@ Pontos de avaliação [OBRIGATÓRIO]
 Pontos de avaliação [Opcional/Extra/Diferencial]
 ------------------------------
 
-- [ ] Validação complexa dos dados (dinheiro para preço do produto)
+- [x] Validação complexa dos dados (dinheiro para preço do produto)
 - [x] Modal de feedback de erros
 - [ ] Modal de confirmação de remoção de registro
 - [ ] Modal de visualização dos dados de cada registro

@@ -19,7 +19,7 @@ const columns = [
     sortable: true,
   },
   {
-    name: 'Preço',
+    name: 'Preço (R$)',
     selector: 'preco',
     sortable: true,
   },

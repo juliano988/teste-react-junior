@@ -87,19 +87,46 @@ export default function FormSec() {
 
           <div>
             <div>
-              <TextField id="SKU" label="SKU" type="number" variant="outlined" {...register("sku")} />
-              {errors.SKU && <span>This field is required</span>}
+              <TextField
+                label="SKU"
+                type="number"
+                variant="outlined"
+                InputLabelProps={{
+                  shrink: true,
+                }}
+                placeholder="Ex.: 9612610"
+                helperText={errors.sku ? 'Formato incorreto.' : 'Inserir numeração do código SKU.'}
+                error={errors.sku ? true : false}
+                {...register("sku", { required: true })} />
             </div>
             <div>
-              <TextField id="nome" label="Nome" type="text" variant="outlined" {...register("nome")} />
-              {errors.nome && <span>This field is required</span>}
+              <TextField
+                label="Nome"
+                type="text"
+                variant="outlined"
+                InputLabelProps={{
+                  shrink: true,
+                }}
+                placeholder="Ex.: Doce de Leite"
+                helperText={errors.nome ? 'Formato incorreto.' : 'Inserir numeração do código SKU.'}
+                error={errors.nome ? true : false}
+                {...register("nome", { required: true })} />
             </div>
           </div>
 
           <div>
             <div>
-              <TextField id="preco" label="Preço" type="text" variant="outlined" {...register("preco")} />
-              {errors.nome && <span>This field is required</span>}
+              <TextField
+                label="Preço"
+                type="text"
+                variant="outlined"
+                InputLabelProps={{
+                  shrink: true,
+                }}
+                placeholder="Ex.: 31,85"
+                helperText={errors.preco ? 'Formato incorreto.' : 'Inserir o valor em reais.'}
+                error={errors.preco ? true : false}
+                {...register("preco", { required: true, pattern: /^[0-9]+,[0-9]{1,2}(?!.)/ })} />
             </div>
             <div>
               <Controller
@@ -116,6 +143,7 @@ export default function FormSec() {
                     SelectProps={{
                       native: true,
                     }}
+                    helperText="Escolher categoria do produto."
                     variant="outlined"
                   >
                     {categories.map((option) => (
@@ -144,7 +172,7 @@ export default function FormSec() {
       </form>
       <Snackbar open={open} autoHideDuration={5000} onClose={handleClose} anchorOrigin={{ vertical: 'top', horizontal: 'right' }}>
         <Alert onClose={handleClose} severity={submitStatus ? 'success' : 'error'}>
-          {submitStatus ? 'Produto inserido com sucesso!' : 'SKU duplicado.'}
+          {submitStatus ? 'Produto inserido com sucesso!' : 'Erro: SKU duplicado.'}
         </Alert>
       </Snackbar>
     </section>

@@ -101,6 +101,7 @@ export default function TableSec() {
         responsive={true}
         columns={columns}
         data={filtredContent}
+        noDataComponent={<p>Não há registros para serem exibidos.</p>}
       />
       <Snackbar open={open} autoHideDuration={5000} onClose={handleClose} anchorOrigin={{ vertical: 'top', horizontal: 'right' }}>
         <Alert onClose={handleClose} severity="info">

@@ -22,6 +22,10 @@ const useStyles = makeStyles((theme) => ({
 
 const categories = [
   {
+    value: '',
+    label: 'Selecionar',
+  },
+  {
     value: 'Leite',
     label: 'Leite',
   },
@@ -108,7 +112,7 @@ export default function FormSec() {
                   shrink: true,
                 }}
                 placeholder="Ex.: Doce de Leite"
-                helperText={errors.nome ? 'Formato incorreto.' : 'Inserir numeração do código SKU.'}
+                helperText={errors.nome ? 'Formato incorreto.' : 'Inserir nome do produto.'}
                 error={errors.nome ? true : false}
                 {...register("nome", { required: true })} />
             </div>
@@ -132,7 +136,8 @@ export default function FormSec() {
               <Controller
                 control={control}
                 name="categoria"
-                defaultValue="Leite"
+                defaultValue=""
+                rules={{ required: true }}
                 render={({ field: { onChange, value } }) => (
                   <TextField
                     id="categoria"
@@ -143,7 +148,11 @@ export default function FormSec() {
                     SelectProps={{
                       native: true,
                     }}
-                    helperText="Escolher categoria do produto."
+                    InputLabelProps={{
+                      shrink: true,
+                    }}
+                    error={errors.categoria ? true : false}
+                    helperText={errors.categoria ? 'Favor selecionar uma opção.' : 'Escolher categoria do produto.'}
                     variant="outlined"
                   >
                     {categories.map((option) => (

@@ -17,8 +17,8 @@ function App() {
         <h1>Teste para avaliação Frontend Junior React</h1>
         <div>
           <ButtonGroup color="primary" aria-label="outlined primary button group">
-            <Button onClick={() => setmenu('form')}>Formulário</Button>
-            <Button onClick={() => setmenu('table')}>Tabela</Button>
+            <Button disabled={menu === 'form' ? true : false} onClick={() => setmenu('form')}>Formulário</Button>
+            <Button disabled={menu === 'table' ? true : false} onClick={() => setmenu('table')}>Tabela</Button>
           </ButtonGroup>
         </div>
         <br />

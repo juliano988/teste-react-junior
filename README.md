@@ -1,46 +1,68 @@
-# Getting Started with Create React App
+# Teste para avaliação Frontend Junior React - Thorson Tecnologia
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Proposta:
 
-In the project directory, you can run:
+Programar um aplicativo em React que fará um CRUD local para cadastro de produtos.
+O projeto contará com um formulário e uma tabela.
 
-### `yarn start`
+## Formulário:
+A página terá um componente que será o formulário de criação, que conterá os seguintes campos:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Código do SKU (int)
+- Nome do produto (string)
+- Preço (string)
+- Categoria (string) - Tipo select
+  - Opções do select:
+    - Leite
+    - Doce
+    - Iogurte
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Tabela:
+Exibir uma tabela com ordenação com as seguintes colunas:
 
-### `yarn test`
+- SKU
+- Nome
+- Preço
+- Categoria
+ -Ações
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Na coluna de ações, adicionar um botão com ícone de lixeira, que ao clicar, irá apagar aquele registro do produto.
 
-### `yarn build`
+## Repositório de dados:
+Os dados do projeto serão armazenados em uma estrutura de ContextAPI.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tecnologias exigidas:
+- Typescript
+- MaterialUI
+- react-data-table-component
+- react-hook-form
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Pontos de avaliação:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [x] Typescript
+- [x] Formulário
+- [x] Validação de SKU duplicado
+- [x] Tabela com visualização dos dados
+- [x] Botão de remover registro
+- [x] Realizar commits bem descritos e bom gerenciamento do repositório GIT
+- [x] Documentação mínima
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Pontos extras:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [x] Validação complexa dos dados (dinheiro para preço do produto)
+- [x] Modal de feedback de erros
+- [x] Modal de confirmação de remoção de registro
+- [ ] Modal de visualização dos dados de cada registro
+- [ ] Edição de dados do registro
+- [ ] Utilização de bibliotecas que simulam APIs (ou desenvolver uma API) para consumo e persistência dos dados
+- [ ] Boa documentação
+- [ ] Testes de unidade
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Utilização:
+No terminal, acessar a diretório deste projeto e executar o comando:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+>``
+>yarn start
+>``

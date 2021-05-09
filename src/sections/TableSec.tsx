@@ -58,7 +58,7 @@ export default function TableSec() {
     if (itemToDelete) {
       Swal.fire({
         title: 'Você tem certeza?',
-        text: 'O item de SKU '+itemToDelete+' será excluído permanentemente nesta ação.',
+        text: 'O item de SKU: ' + itemToDelete + ' será excluído permanentemente nesta ação.',
         icon: 'question',
         showCancelButton: true,
         cancelButtonText: 'Cancelar!',

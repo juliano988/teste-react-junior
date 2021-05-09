@@ -77,7 +77,7 @@ export default function FormSec() {
       tempArr.push(data);
       productsDBState.setState(tempArr)
       reset();
-      setValue('categoria', 'Leite');
+      setValue('categoria', '');
     }
   }
 

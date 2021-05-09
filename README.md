@@ -19,7 +19,7 @@ A página terá um componente que será o formulário de criação, que conterá
     - Iogurte
 
 ## Tabela:
-Exibir uma tabela com ordenação com as seguintes colunas:
+Exibir uma tabela com ordenação e filtro com as seguintes colunas:
 
 - SKU
 - Nome

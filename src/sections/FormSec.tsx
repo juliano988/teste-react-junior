@@ -140,7 +140,6 @@ export default function FormSec() {
                 rules={{ required: true }}
                 render={({ field: { onChange, value } }) => (
                   <TextField
-                    id="categoria"
                     select
                     label="Categoria"
                     value={value}

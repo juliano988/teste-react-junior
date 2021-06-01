@@ -1,5 +1,5 @@
 import { Button, ButtonGroup } from '@material-ui/core';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { productsDBSchema } from '../customTypes';
 import FormSec from './sections/FormSec';
 import TableSec from './sections/TableSec';
